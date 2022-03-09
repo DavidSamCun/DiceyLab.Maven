@@ -3,7 +3,7 @@ import java.util.Random;
 public class Dice {
 
     private static Random rand = new Random();
-    private static int dice = 1;       //Default number of dice
+    private static int dice;      //Default number of dice
     private static int defMax = 1;
     private static int defMin = 6;       //Default min
     //private final int numOfDie;
