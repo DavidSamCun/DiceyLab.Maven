@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class BinsTest {
 
     @Test
-    void incremintBin() {
+    void binTest() {
 
 
 
