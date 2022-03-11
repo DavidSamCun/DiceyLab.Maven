@@ -22,10 +22,10 @@ public class Bins {
         bin[roll-min]++;
     }
 
-    public static int getRoll(int roll){
-        int amount = 0;
-        bin[roll-min] = amount;
-        return amount;
+    public int getRollAmount(int roll){
+//        int amount = 0;
+//        bin[roll-min] = amount;
+        return bin[roll-min];
     }
 
 }
