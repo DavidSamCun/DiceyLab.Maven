@@ -39,7 +39,7 @@ public class Simulation {
                 "***\n\n";
 
         for(int i = 0; i < range; i++){
-            this.rollResult += min+" :    ";
+            this.rollResult += String.format(min+" :    ");
         }
 
     }
