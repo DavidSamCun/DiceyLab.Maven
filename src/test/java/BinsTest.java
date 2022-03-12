@@ -39,8 +39,26 @@ class BinsTest {
 
     }
 
-    //@Test
+    @Test
+    void getRollTest2() {
 
+        //Given
+        Bins bins1 = new Bins(2, 12);
+        int roll = 10;
+
+        //When
+        int expected = 10;
+        for(int i = 1; i <= 10; i++) {
+            bins1.incremintBin(roll);
+        }
+
+
+
+        int actual  = bins1.getRollAmount(10);
+        //Then
+        Assert.assertEquals(expected,actual);
+
+    }
 
 
 }
