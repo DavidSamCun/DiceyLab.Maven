@@ -4,8 +4,8 @@ public class Dice {
 
     private static Random rand = new Random();
     private static int dice;      //Default number of dice
-    private static int defMax = 1;
-    private static int defMin = 6;       //Default min
+    //private static int defMax = 1;
+    //private static int defMin = 6;       //Default min
     //private final int numOfDie;
     //private int rollResult;
 
@@ -39,8 +39,15 @@ public class Dice {
         return this.dice;
     }
 
-    public int tossAndSum(){             //Getter
-        int output = rand.nextInt(1*dice, 6*dice);
+    public int tossAndSum(){
+//
+//        int output = rand.nextInt(1*dice, (6*dice)+1);
+//        return output;
+
+        int output = 0;
+        for ( int i = 1; i <= getAmntDice(); i++){
+            output += rand.nextInt(1, 7);
+        }
         return output;
     }
 

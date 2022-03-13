@@ -7,25 +7,25 @@ public class Bins {
 
     public Bins(){
         this.min = 1;
-        this.max = 2;
-        this.bin = new int[max - min +1];
-
+        this.max = 6;
+//        this.bin = new int[max - min +1];
+        this.bin = new int[max+1];
     }
 
     public Bins(int min, int max){
         this.min = min;
         this.max = max;
-        this.bin = new int[max - min +1];
+        this.bin = new int[max+1];
     }
 
     public void incremintBin(int roll){
-        bin[roll-min]++;
+        bin[roll]++;
     }
 
     public int getRollAmount(int roll){
 //        int amount = 0;
 //        bin[roll-min] = amount;
-        return bin[roll-min];
+        return bin[roll];
     }
 
 }

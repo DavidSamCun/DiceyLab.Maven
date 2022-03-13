@@ -60,5 +60,29 @@ class BinsTest {
 
     }
 
+    @Test
+    void getRollTest3() {
+
+        //Given
+        Dice dice1 = new Dice(2);
+        int min = 1* dice1.getAmntDice();
+        int max = 6* dice1.getAmntDice();
+        Bins bins1 = new Bins(min, max);
+        int count = 0;
+
+        //When
+        for(int i = 0; i < 1000000; i++) {
+            bins1.incremintBin(dice1.tossAndSum());
+        }
+
+        for(int i = min; i <= max; i++){
+            System.out.println(i + " " + bins1.getRollAmount(i));
+            count += bins1.getRollAmount(i);
+            System.out.println(count);
+        }
+        //Then
+        //Assert.assertEquals(expected,actual);
+
+    }
 
 }
