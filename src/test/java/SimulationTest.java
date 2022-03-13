@@ -7,6 +7,10 @@ class SimulationTest {
     @Test
     void runSimulation() {
 
+        //Given
+        int dice = 2;
+        int tries = 100;
+
         Simulation sim = new Simulation(2, 100);
         sim.runSimulation();
 
@@ -15,6 +19,16 @@ class SimulationTest {
     }
 
     @Test
-    void result() {
+    void runSimulation2() {
+
+        //Given
+        int dice = 2;
+        int tries = 100;
+
+        Simulation sim = new Simulation(2, 1000000);
+        sim.runSimulation();
+
+        sim.result();
+
     }
 }

@@ -8,7 +8,6 @@ public class Bins {
     public Bins(){
         this.min = 1;
         this.max = 6;
-//        this.bin = new int[max - min +1];
         this.bin = new int[max+1];
     }
 
@@ -23,8 +22,6 @@ public class Bins {
     }
 
     public int getRollAmount(int roll){
-//        int amount = 0;
-//        bin[roll-min] = amount;
         return bin[roll];
     }
 

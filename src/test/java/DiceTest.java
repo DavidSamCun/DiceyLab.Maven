@@ -9,30 +9,25 @@ class DiceTest {
 
 
     @Test
-    public void diceTest(){         //set dice
+    public void diceTest(){
 
-        //Given
-        Dice dice = new Dice();    //Dice amount
-        int expected = 1;                 //expected default 1
 
-        //When          //Calling the die
+        Dice dice = new Dice();
+        int expected = 1;
+
         int actual = dice.getAmntDice();
 
-        //Then
         Assert.assertEquals(expected, actual);
 
     }
     @Test
     public void twoDiceTest(){
 
-        //Given
         Dice dice = new Dice(2);
         int expected = 2;
 
-        //When
         int actual = dice.getAmntDice();
 
-        //Then
         Assert.assertEquals(expected, actual);
 
     }
@@ -40,40 +35,35 @@ class DiceTest {
     @Test
     public void addDiceTest(){
 
-        //Given
         Dice dice = new Dice(2);
         int expected = 3;
 
-        //when
         dice.addDice();
         int actual = dice.getAmntDice();
 
-        //Then
         Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void removeDiceTest(){
-        //Given
+
         Dice dice = new Dice(2);
         int expected = 1;
 
-        //when
         dice.removeDie();
         int actual = dice.getAmntDice();
 
-        //Then
         Assert.assertEquals(expected, actual);
 
     }
 
     @Test
     public void tossAndSumTest1() {
-        //Given
+
         Dice dice = new Dice();
         boolean inRange = true;
 
-        //when
+
         int roll = dice.tossAndSum();
         boolean rollRange;
         if ((1 <= roll) && (roll <= 6)) {
@@ -82,7 +72,6 @@ class DiceTest {
             rollRange = false;
         }
 
-        //Then
         System.out.println(roll);
         Assert.assertEquals(inRange, rollRange);
     }

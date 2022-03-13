@@ -35,9 +35,9 @@ public class Simulation {
                 " dice tossed for " + this.tries + " times. \n" +
                 "***\n\n";
         System.out.println(rollResult);
-        for(int i = 0; i < range; i++){
-            rollOutput = (min + i) + "" + bin.getRollAmount(i);
-
+        for(int i = min; i <=max; i++){
+            rollOutput = (i) + "      " + bin.getRollAmount(i);
+            System.out.println(rollOutput);
 
 //            this.rollResult += String.format("%3d : ", min + i) +  String.format("%3d  : ", bin.getRollAmount(i)) +
 //                    String.format("%.2f : ",  Double.valueOf(bin.getRollAmount(i)/this.tries)) +"\n";
