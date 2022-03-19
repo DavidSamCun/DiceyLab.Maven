@@ -67,18 +67,9 @@ public class Simulation {
             for(int j = 0; j < starsAmnt; j++){
                 stars+= "*";
             }
-
             rollOutput += String.format("%-2d :  %6d : %.2f %s \n", i, bin.getRollAmount(i), percent, stars);
             stars = "";
-            //rollOutput = (i) + "      " + bin.getRollAmount(i);
-            //System.out.println(rollOutput);
-
         }
         System.out.println(rollOutput);
-//            this.rollResult += String.format("%3d : ", min + i) +  String.format("%3d  : ", bin.getRollAmount(i)) +
-//                    String.format("%.2f : ",  Double.valueOf(bin.getRollAmount(i)/this.tries)) +"\n";
-
-        //"%3d |\n"
-
     }
 }
